@@ -1,5 +1,5 @@
 import React from "react";
-import { TouchableOpacity, View, Text, ScrollView } from "react-native";
+import { TouchableOpacity, View, Text} from "react-native";
 import styles from "../styles/styles";
 import { Octicons } from '@expo/vector-icons';
 
@@ -9,7 +9,7 @@ import { Octicons } from '@expo/vector-icons';
 const Movimentacao = ()=>{
     return(
 
-    <TouchableOpacity style={styles.principalrMovimentacao}>
+    <View style={styles.principalrMovimentacao}>
         <View style={styles.containerMovimentacao}>
 
     <Octicons name="credit-card" size={18} color="black" />
@@ -42,7 +42,7 @@ const Movimentacao = ()=>{
         <TouchableOpacity style={styles.buttonAdd} >
         <Text style={styles.btnAdd}>+</Text>
         </TouchableOpacity>
-    </TouchableOpacity>
+    </View>
    
     )
 }

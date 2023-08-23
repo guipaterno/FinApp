@@ -1,11 +1,12 @@
 import {createNativeStackNavigator} from "@react-navigation/native-stack";
-import { RoutesTypes } from "../@types/Routes";
+
 
 import Login from "../screens/Login";
 import Cadastro from "../screens/Cadastro";
 import Home from "../screens/Home"
 
 const Stack = createNativeStackNavigator();
+
 
 
 const Routes = ()=>{

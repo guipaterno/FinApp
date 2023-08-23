@@ -4,3 +4,5 @@ export type RoutesTypes = {
     Home: string;
     
 };
+
+

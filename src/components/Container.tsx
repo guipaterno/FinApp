@@ -3,7 +3,7 @@ import { View, Text, SafeAreaView} from "react-native";
 import styles from "../styles/styles";
 import {MaterialCommunityIcons} from "@expo/vector-icons";
 import Banner from "./Banner";
-import TesteBanner from "./FlatCount";
+
 
 type PropsContainer = {
     saldoTotal:string;

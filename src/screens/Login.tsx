@@ -9,16 +9,17 @@ import Input from "../components/Input";
 import InputSenha from "../components/InputSenha";
 
 
-
 const Login = ()=>{
-
+ 
+  
   const [nome, setNome] = useState('');
   const [senha, setSenha] = useState('');
   const [nomeError, setNomeError] = useState('');
   const [senhaError, setSenhaError] = useState('');
   
+  const navigation = useNavigation();
   
-    const logar = ()=>{
+  const logar = ()=>{
 
         if (nome.trim() === '') {
             setNomeError('*Preencha o campo "NOME"');
@@ -28,14 +29,12 @@ const Login = ()=>{
             setSenhaError('*Preencha o campo "Senha"');
             return;
           }
-
           navigation.navigate("Home");
-
+         
     };
-    const navigation = useNavigation();
 
     const clickCadastro = () =>{
-        navigation.navigate("Cadastro");
+          navigation.navigate("Cadastro");
     }
 
     

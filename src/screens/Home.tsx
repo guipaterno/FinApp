@@ -8,11 +8,13 @@ import Transacoes from "../components/Transacoes";
 
 const Home = ()=>{
 
+   
     return(
         <ScrollView style={styles.safeArea}>
             
         <Header/>     
-        <Container saldoTotal="2.000,00"/>
+        <Container saldoTotal="26658" />
+
         
         <Transacoes/>
             

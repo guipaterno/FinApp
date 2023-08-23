@@ -6,6 +6,7 @@ import Routes from "./src/routes/index"
 import Login from './src/screens/Login';
 import Cadastro from './src/screens/Cadastro';
 import Home from './src/screens/Home';
+import TesteBanner from './src/components/FlatCount';
 
 
 
@@ -13,7 +14,7 @@ import Home from './src/screens/Home';
 export default function App() {
   return (
     <NavigationContainer>
-      <Routes/>    
+      <Routes/>
     </NavigationContainer>
   );
 }

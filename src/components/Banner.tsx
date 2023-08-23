@@ -1,11 +1,36 @@
 import React from "react";
-import { View, Text} from "react-native";
+import { View, Text, FlatList,SafeAreaView, Dimensions} from "react-native";
 import styles from "../styles/styles";
 import {Octicons } from "@expo/vector-icons"
+import FlatCount from "./FlatCount";
+
+
+
+
 
 
 const Banner = ()=>{
     return(
+
+        <FlatCount/>
+
+    )
+}
+
+export default Banner;
+
+
+
+/*
+
+
+
+
+
+const Banner = ()=>{
+    return(
+
+        
         <View style={styles.principalContainer}>
             <Octicons name="credit-card" style={styles.iconeCartao} />
             <Text style={styles.textBanco}>Nubank</Text>
@@ -27,3 +52,5 @@ const Banner = ()=>{
 }
 
 export default Banner;
+
+*/

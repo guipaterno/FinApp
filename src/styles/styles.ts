@@ -217,16 +217,14 @@ textBanco:{
     fontSize:16,
 },
 
+viewBancoSaldo:{
+    paddingTop:45,
+},
 textValorSaldo:{
     color:"black",
     fontSize:16,
 
 },
-
-viewBancoSaldo:{
-    paddingTop:45,
-},
-
 textSaldo:{
     color:"gray",
     fontSize:13,

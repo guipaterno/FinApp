@@ -6,13 +6,14 @@ import Container from "../components/Container";
 import Transacoes from "../components/Transacoes";
 
 
-
 const Home = ()=>{
+
     return(
         <ScrollView style={styles.safeArea}>
             
         <Header/>     
-        <Container/>
+        <Container saldoTotal="2.000,00"/>
+        
         <Transacoes/>
             
         </ScrollView>

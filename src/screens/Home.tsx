@@ -13,7 +13,7 @@ const Home = ()=>{
         <ScrollView style={styles.safeArea}>
             
         <Header/>     
-        <Container saldoTotal="26658" />
+        <Container/>
 
         
         <Transacoes/>

@@ -374,6 +374,11 @@ buttonMes:{
     textAlign:"right"
   },
 
+  textMovValorNegative: {
+    fontSize: 13,
+    color: 'red',
+  },
+
   textMovValor2:{
     color:"red",
     fontSize:13,
@@ -394,6 +399,40 @@ buttonMes:{
   },
   btnAdd:{
     color:"white",
+
+  },
+
+  modalContainer:{
+    flex:1,
+    
+  },
+
+  viewModal:{
+     marginVertical: 50,
+     marginLeft:35,
+     marginRight:35,
+  },
+
+  actionBtn:{
+    zIndex:99,
+    backgroundColor:"#F0F2F1",
+    borderRadius:6,
+    marginTop:8,
+    padding:10,
+    borderWidth:1,
+    borderColor:"black",
+    elevation:5,
+    shadowColor:"gray",
+    shadowOffset:{
+      width:0,
+      height:2,
+    },
+  },
+
+  actionText:{
+    textAlign:"center",
+    fontSize:13,
+    color:"#0F0F10"
 
   },
 })

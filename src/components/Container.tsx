@@ -6,19 +6,19 @@ import {Octicons } from "@expo/vector-icons";
 
 
 
-type ItemData = {
+type ItemSaldoTotal = {
     id: string;
     title: string;
     icon:any;
     value:string;
   };
   
-  const DATA: ItemData[] = [
+  const SaldoTotal: ItemSaldoTotal[] = [
     {
       id: '1',
       title: 'Nubank',
       icon: "credit-card",
-      value:"200,14",
+      value:"2010,14",
     },
     {
       id: '2',
@@ -37,11 +37,11 @@ type ItemData = {
   ];
   
   type ItemProps = {
-    item: ItemData;
+    item: ItemSaldoTotal;
     
   };
   
-  const totalValue = DATA.reduce((accumulator, currentItem) => {
+  const totalValue = SaldoTotal.reduce((accumulator, currentItem) => {
     const itemValue = parseFloat(currentItem.value.replace(',', '.'));
     return accumulator + itemValue;
   }, 0);
@@ -93,7 +93,7 @@ const Container = ()=>{
     return (
       <SafeAreaView style={styles.viewContainer}>
         <FlatList
-          data={DATA}
+          data={SaldoTotal}
           horizontal
           showsHorizontalScrollIndicator={false}
           scrollEnabled        

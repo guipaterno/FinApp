@@ -1,10 +1,10 @@
 import React from "react";
-import { TouchableOpacity, View, Text,SafeAreaView, FlatList} from "react-native";
+import { View, Text, FlatList} from "react-native";
 import styles from "../styles/styles";
 import { MaterialIcons } from '@expo/vector-icons';
 
 
-type ItemData = {
+type ItemMovConta = {
     id: string;
     movimentacao: string;
     icon:any;
@@ -13,7 +13,7 @@ type ItemData = {
 
   };
   
-  const DATA: ItemData[] = [
+  const MovConta: ItemMovConta[] = [
     {
       id: '1',
       movimentacao: 'Sálario',
@@ -27,7 +27,7 @@ type ItemData = {
       movimentacao: 'Cinema',
       icon:"movie",
       date:"12/01/2021",
-      value:"350,00",
+      value:"-350,00",
   
     },
     {
@@ -57,7 +57,7 @@ type ItemData = {
   ];
 
   type ItemProps = {
-    item: ItemData;
+    item: ItemMovConta;
     
   };
 
@@ -65,26 +65,26 @@ type ItemData = {
 
 
 
-const MovimentacaoConta = ({item}: ItemProps)=>{
-    return(
+  const MovimentacaoConta = ({ item }: ItemProps) => {
+    
+    const isNegative = item.value.startsWith('-');
+    const value = parseFloat(item.value);
 
-    <View style={styles.principalrMovimentacao}>
+  
+    return (
+      <View style={styles.principalrMovimentacao}>
         <View style={styles.containerMovimentacao}>
-
-    <MaterialIcons name={item.icon} style={styles.iconeCartao} />
-
-      
-        <View style={styles.containerLancamento}>
-        <Text style={styles.textMovimentacao}>{item.movimentacao}</Text>
-        <Text style={styles.textData}>{item.date}</Text>
-        
-        </View>
-
-        <Text style={styles.textMovValor}>R${item.value }</Text>
-
+          <MaterialIcons name={item.icon} style={styles.iconeCartao} />
+          <View style={styles.containerLancamento}>
+            <Text style={styles.textMovimentacao}>{item.movimentacao}</Text>
+            <Text style={styles.textData}>{item.date}</Text>
+          </View>
+          <Text style={isNegative ? styles.textMovValorNegative : styles.textMovValor}>
+            R${value.toFixed(2)}
+          </Text>
         </View>
         
-    </View>
+      </View>
    
     )
 }
@@ -94,7 +94,7 @@ const Movimentacao = () => {
     return (
         <View style={styles.viewContainerMov}>
       <FlatList
-        data={DATA}
+        data={MovConta}
         showsVerticalScrollIndicator={false}
         renderItem={MovimentacaoConta}
         keyExtractor={item => item.id}
@@ -106,3 +106,5 @@ const Movimentacao = () => {
   };
 
 export default Movimentacao;
+
+

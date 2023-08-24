@@ -404,35 +404,59 @@ buttonMes:{
 
   modalContainer:{
     flex:1,
+    /* alignContent:"center",
+    backgroundColor:"white",
+    opacity:0.8, */
+    
     
   },
 
   viewModal:{
-     marginVertical: 50,
-     marginLeft:35,
-     marginRight:35,
+    marginVertical: 50,
+    marginLeft:35,
+    marginRight:35,
+    alignContent:"center",
+    backgroundColor:"white",
+    elevation:5,
+    padding:50,
+    width:"auto",
+    height:"auto",
+    borderRadius:10,
+    shadowOpacity:0.50,
+    shadowRadius:4,
+   
+    
+     
   },
-
+  textTituloModal:{
+    fontSize:18,
+    fontWeight:"bold",
+    textAlign:"center",
+    letterSpacing:1,
+  },
   actionBtn:{
     zIndex:99,
-    backgroundColor:"#F0F2F1",
+    backgroundColor:"white",
     borderRadius:6,
     marginTop:8,
     padding:10,
     borderWidth:1,
-    borderColor:"black",
+    borderColor:"rgba(0,0,0,0.2)",
+    shadowColor:"rgba(0,0,0,0.5)",
     elevation:5,
-    shadowColor:"gray",
     shadowOffset:{
       width:0,
       height:2,
     },
+    shadowOpacity:0.43,
+    shadowRadius:4,
+    
   },
 
   actionText:{
     textAlign:"center",
     fontSize:13,
-    color:"#0F0F10"
+    color:"black"
 
   },
 })

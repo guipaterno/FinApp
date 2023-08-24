@@ -13,6 +13,7 @@ const ModalTransacao = ({handleClose}:Props) => {
     <SafeAreaView style={styles.modalContainer}>
         <TouchableOpacity style={{flex:1, zIndex:9}} onPress={handleClose}></TouchableOpacity>
         <View style={styles.viewModal}>
+        <Text style={styles.textTituloModal}>Transações</Text>
             <TouchableOpacity
              style={styles.actionBtn}
              onPress={()=>{}}

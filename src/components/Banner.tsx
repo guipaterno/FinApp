@@ -18,6 +18,7 @@ const DATA: ItemData[] = [
     value:"200,00",
   },
   {
+
     id: '2',
     title: 'C6 Bank',
     icon:"credit-card",
@@ -48,11 +49,7 @@ const Item = ({item}: ItemProps) => (
   
   <View  style={styles.principalContainer}>
 
-    {/* teste aqui */}
-    <Text>Total: R${totalValue.toFixed(2)}</Text> 
-    {/* teste até aqui */}
-
-
+    
     <Octicons name={item.icon} style={styles.iconeCartao} />
     <Text style={styles.textBanco}>{item.title}</Text>
 

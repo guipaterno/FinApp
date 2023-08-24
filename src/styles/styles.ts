@@ -5,7 +5,6 @@ const styles = StyleSheet.create({
       flex: 1,
       backgroundColor: "#faf9f9",
       padding: 15,
-          
      
   },
 
@@ -149,6 +148,13 @@ viewContainer:{
     borderRadius:15,
 },
 
+viewContainerMov:{
+  flex:1,
+  backgroundColor: "#159761",
+  width:"auto",
+  height:"auto",
+  borderRadius:15,
+},
 textContainerSaldo:{
     color:"white",
     fontSize:13,
@@ -236,8 +242,9 @@ principalTransacoes:{
     marginLeft:2,
     backgroundColor:"#ddd5",
     width:"auto",
-    height:320,
+    height:450,
     borderRadius:8,
+    marginBottom:30,
     
 },
 containerTransacoes:{

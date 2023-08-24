@@ -22,6 +22,9 @@ const Botao = ({labelButton, onpress}:PropsBotao)=>{
     )
 }
 
+
+
+
 export default Botao;
 
 

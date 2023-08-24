@@ -1,10 +1,11 @@
 import React from "react";
-import { View, Text} from "react-native";
+import { View, Text, TouchableOpacity} from "react-native";
 import styles from "../styles/styles";
 import { MaterialIcons, MaterialCommunityIcons, AntDesign } from '@expo/vector-icons';
 import Calendario from "./Calendario";
 import Movimentacao from "./Movimentacao";
 
+import AddBotao from "./AddBotao";
 
 const Transacoes = ()=>{
     return(
@@ -21,6 +22,7 @@ const Transacoes = ()=>{
             </View>
         <Calendario/>
         <Movimentacao/>
+        <AddBotao/>
         
            
         </View>

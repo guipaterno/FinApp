@@ -1,5 +1,5 @@
 import React from "react";
-import {ScrollView} from "react-native";
+import {ScrollView, SafeAreaView, View} from "react-native";
 import styles from "../styles/styles";
 import Header from "../components/Header";
 import Container from "../components/Container";

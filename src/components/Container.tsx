@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "../styles/styles";
 import {MaterialCommunityIcons} from "@expo/vector-icons";
-import { FlatList,  SafeAreaView,  Text,  View} from 'react-native';
+import { FlatList,  SafeAreaView,  Text,  View, TouchableOpacity} from 'react-native';
 import {Octicons } from "@expo/vector-icons";
 
 
@@ -47,16 +47,29 @@ type ItemSaldoTotal = {
   }, 0);
   
 
-
 const Container = ()=>{
-
+    const [showSaldo, setShowSaldo] = useState(false);
     
+   
     return(
     <SafeAreaView style={styles.viewContainer}> 
       <Text style={styles.textContainerSaldo}>Saldo total</Text>
         <View style={styles.viewSaldo}>
-            <Text style={styles.textContainerValor}>R${totalValue.toFixed(2)} </Text>
-            <MaterialCommunityIcons name="currency-usd-off" style={styles.iconeValor} />
+
+        {showSaldo ? (
+             <Text style={styles.textContainerValor}>R${totalValue.toFixed(2)} </Text>
+        ):(
+            <Text style={styles.textContainerValor}>R$ ****** </Text>
+        )}
+            <TouchableOpacity style={styles.iconeValor} onPress={() => setShowSaldo(!showSaldo)}>
+            {showSaldo ?(
+
+                <MaterialCommunityIcons name="currency-usd-off" style={styles.iconeValor} />
+            ): (
+                <MaterialCommunityIcons name="currency-usd" style={styles.iconeValor} />
+            )}
+            </TouchableOpacity>
+
         </View>
 
         <View>

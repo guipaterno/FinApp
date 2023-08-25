@@ -1,35 +1,41 @@
 import {createNativeStackNavigator} from "@react-navigation/native-stack";
-
+import { RoutesTypes } from "../@types/Routes";
 
 import Login from "../screens/Login";
 import Cadastro from "../screens/Cadastro";
 import Home from "../screens/Home"
 
-const Stack = createNativeStackNavigator();
+
+
+
+const {Navigator, Screen} = createNativeStackNavigator<RoutesTypes>();
 
 
 
 const Routes = ()=>{
     return(
-        <Stack.Navigator initialRouteName="Login" screenOptions={{headerShown:false}}> 
-            <Stack.Screen 
+        <Navigator initialRouteName="Login" screenOptions={{headerShown:false}}> 
+            <Screen 
             name="Login"
             component={Login}
             />
 
-            <Stack.Screen 
+            <Screen 
             name="Cadastro"
             component={Cadastro}
             />
 
-            <Stack.Screen 
+            <Screen 
             name="Home"
             component={Home}
             />
    
-        </Stack.Navigator>
+        </Navigator>
     )
 };
 
 
+
 export default Routes;
+
+

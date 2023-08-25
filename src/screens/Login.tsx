@@ -7,18 +7,19 @@ import { useState } from "react";
 import Botao from "../components/Botao";
 import Input from "../components/Input";
 import InputSenha from "../components/InputSenha";
+import { StackTypes } from "../@types/Routes";
 
 
 
 const Login = ()=>{
  
+  const navigation = useNavigation<StackTypes>();
   
   const [nome, setNome] = useState('');
   const [senha, setSenha] = useState('');
   const [nomeError, setNomeError] = useState('');
   const [senhaError, setSenhaError] = useState('');
   
-  const navigation = useNavigation();
   
   const logar = ()=>{
 

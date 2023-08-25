@@ -31,7 +31,7 @@ type ItemSaldoTotal = {
       id: '3',
       title: 'Itau',
       icon:"credit-card",
-      value:"1000,73",
+      value:"10000,73",
   
     },
   ];

@@ -5,20 +5,15 @@ import Botao from "../components/Botao";
 import Input from "../components/Input";
 import styles from "../styles/styles";
 import { useNavigation } from "@react-navigation/native";
-
+import { StackTypes } from "../@types/Routes";
 import { useState } from "react";
 import InputSenha from "../components/InputSenha";
 
 
-/* 
-VERIFICAR COMO FAZ A TIPAGEM PARA NÃO DAR ERRO NO LOGIN
-type PropsCadastro = {
-    navigation:any;
-   
-}
-*/
 const Cadastro = ()=>{
   
+  const navigation = useNavigation<StackTypes>();
+
   const [nome, setNome] = useState('');
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
@@ -26,9 +21,7 @@ const Cadastro = ()=>{
   const [emailError, setEmailError] = useState('');
   const [senhaError, setSenhaError] = useState('');
   
-  
-  const navigation = useNavigation();
-  
+     
   const clicar = ()=>{
     
         if (nome.trim() === '') {

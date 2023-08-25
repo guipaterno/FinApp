@@ -92,8 +92,8 @@ type ItemMovConta = {
 const Movimentacao = () => {
 
     return (
-        <View style={styles.viewContainerMov}>
-      <FlatList
+        
+      <FlatList style={styles.viewContainerMov} 
         data={MovConta}
         showsVerticalScrollIndicator={false}
         renderItem={MovimentacaoConta}
@@ -101,7 +101,7 @@ const Movimentacao = () => {
         scrollEnabled        
 
       />
-    </View>
+    
     );
   };
 

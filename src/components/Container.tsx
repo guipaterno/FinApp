@@ -104,8 +104,8 @@ const Container = ()=>{
   const Banner = () => {
   
     return (
-      <SafeAreaView style={styles.viewContainer}>
-        <FlatList
+      
+        <FlatList style={styles.viewContainer}
           data={SaldoTotal}
           horizontal
           showsHorizontalScrollIndicator={false}
@@ -116,7 +116,7 @@ const Container = ()=>{
         />
         
         
-      </SafeAreaView>
+      
     );
   };
 

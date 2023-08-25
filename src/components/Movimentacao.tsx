@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, FlatList} from "react-native";
+import { View, Text, FlatList, TouchableOpacity} from "react-native";
 import styles from "../styles/styles";
 import { MaterialIcons } from '@expo/vector-icons';
 
@@ -73,7 +73,7 @@ type ItemMovConta = {
   
     return (
       <View style={styles.principalrMovimentacao}>
-        <View style={styles.containerMovimentacao}>
+        <TouchableOpacity style={styles.containerMovimentacao}>
           <MaterialIcons name={item.icon} style={styles.iconeCartao} />
           <View style={styles.containerLancamento}>
             <Text style={styles.textMovimentacao}>{item.movimentacao}</Text>
@@ -82,7 +82,7 @@ type ItemMovConta = {
           <Text style={isNegative ? styles.textMovValorNegative : styles.textMovValor}>
             R${value.toFixed(2)}
           </Text>
-        </View>
+        </TouchableOpacity>
         
       </View>
    

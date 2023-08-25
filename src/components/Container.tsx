@@ -3,6 +3,8 @@ import styles from "../styles/styles";
 import {MaterialCommunityIcons} from "@expo/vector-icons";
 import { FlatList,  SafeAreaView,  Text,  View, TouchableOpacity} from 'react-native';
 import {Octicons } from "@expo/vector-icons";
+import * as Animatable from "react-native-animatable"
+
 
 
 
@@ -52,7 +54,7 @@ const Container = ()=>{
     
    
     return(
-    <SafeAreaView style={styles.viewContainer}> 
+    <SafeAreaView  style={styles.viewContainer}> 
       <Text style={styles.textContainerSaldo}>Saldo total</Text>
         <View style={styles.viewSaldo}>
 
@@ -88,7 +90,7 @@ const Container = ()=>{
   const Item = ({item}: ItemProps) => (
   
     
-    <View  style={styles.principalContainer}>
+    <Animatable.View delay={300} animation="fadeInRight" duration={3000} style={styles.principalContainer}>
   
       <Octicons name={item.icon} style={styles.iconeCartao} />
       <Text style={styles.textBanco}>{item.title}</Text>
@@ -97,7 +99,7 @@ const Container = ()=>{
         <Text style={styles.textValorSaldo}>R${parseFloat(item.value.replace(',', '.')).toFixed(2)}</Text>
         <Text style={styles.textSaldo}>Saldo atual</Text>
       </View>
-    </View>
+    </Animatable.View>
   );
   
   

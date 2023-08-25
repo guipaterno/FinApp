@@ -8,6 +8,8 @@ import Movimentacao from "./Movimentacao";
 import AddBotao from "./AddBotao";
 import ModalTransacao  from "../Modal/ModalTransacao";
 import ModalFiltro from "../Modal/ModalFiltro";
+import * as Animatable from "react-native-animatable"
+
 
 
 
@@ -18,7 +20,7 @@ const Transacoes = ()=>{
     const [filtroModal,setFiltroModal] = useState(false);
 
     return(
-        <View style={styles.principalTransacoes}>
+        <Animatable.View delay={800} animation="fadeInUp" style={styles.principalTransacoes}>
             <View style={styles.containerTransacoes}>
                     <MaterialCommunityIcons style={styles.iconTransacoes} name="bank-transfer"  />
                     <Text style={styles.textTransacoes}>Transações</Text>
@@ -56,7 +58,7 @@ const Transacoes = ()=>{
         <AddBotao/>
         
            
-        </View>
+        </Animatable.View>
 
     )
 }

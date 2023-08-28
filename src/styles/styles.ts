@@ -1,9 +1,11 @@
 import { StyleSheet } from "react-native";
+import THEME from "../theme/theme";
+
 
 const styles = StyleSheet.create({
   safeArea:{
       flex: 1,
-      backgroundColor: "#faf9f9",
+      backgroundColor: THEME.COLORS.BACKGROUND,
       padding: 15,
      
   },
@@ -50,7 +52,7 @@ const styles = StyleSheet.create({
 
   textLink:{
       fontSize:15,
-      color:"#159761",
+      color:THEME.COLORS.PRIMARIA,
       marginLeft:5,
      
       
@@ -62,7 +64,7 @@ const styles = StyleSheet.create({
   },
 
   container:{
-      backgroundColor: "#faf9f9",
+      backgroundColor:THEME.COLORS.BACKGROUND,
       paddingTop:50,
   },
 
@@ -81,13 +83,13 @@ const styles = StyleSheet.create({
 
 },
   viewArea:{
-    backgroundColor: "#faf9f9",
+    backgroundColor: THEME.COLORS.BACKGROUND,
     paddingTop:8,
     margin:3,
     
 },
 button:{
-  backgroundColor: "#159761",
+  backgroundColor: THEME.COLORS.PRIMARIA,
   width:"auto",
   height:45,
   justifyContent:"center",
@@ -136,13 +138,13 @@ btnTextUser:{
 },
 
 viewUser:{
-    backgroundColor:"#faf9f9",
+    backgroundColor:THEME.COLORS.BACKGROUND,
     flexDirection:"row",
     justifyContent:"space-between",
 },
 
 viewContainer:{
-    backgroundColor: "#159761",
+    backgroundColor: THEME.COLORS.PRIMARIA,
     width:"auto",
     height:"auto",
     borderRadius:15,
@@ -150,7 +152,7 @@ viewContainer:{
 
 viewContainerMov:{
   flex:1,
-  backgroundColor: "#159761",
+  backgroundColor: THEME.COLORS.PRIMARIA,
   width:"auto",
   height:"auto",
   borderRadius:15,
@@ -240,7 +242,7 @@ textSaldo:{
 principalTransacoes:{
     marginTop:20,
     marginLeft:2,
-    backgroundColor:"#ddd5",
+    backgroundColor:THEME.COLORS.SECUNDARIO,
     width:"auto",
     height:450,
     borderRadius:8,
@@ -386,7 +388,7 @@ buttonMes:{
   },
 
   buttonAdd:{
-    backgroundColor: "#159761",
+    backgroundColor: THEME.COLORS.PRIMARIA,
     marginTop:10,
     marginBottom:-5,
     marginHorizontal:-5,

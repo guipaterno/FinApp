@@ -10,7 +10,7 @@ import Home from './src/screens/Home';
 export default function App() {
   return (
     <NavigationContainer>
-      <Routes/>
+      <Home/>
     </NavigationContainer>
   );
 }

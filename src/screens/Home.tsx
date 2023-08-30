@@ -4,21 +4,22 @@ import styles from "../styles/styles";
 import Header from "../components/Header";
 import Container from "../components/Container";
 import Transacoes from "../components/Transacoes";
+import AddBotao from "../components/AddBotao";
 
 
 const Home = ()=>{
 
    
     return(
-        <ScrollView style={styles.safeArea}>
+        <SafeAreaView style={styles.safeArea}>
             
         <Header/>     
         <Container/>
 
         
         <Transacoes/>
-            
-        </ScrollView>
+      
+        </SafeAreaView>
     )
 };
 

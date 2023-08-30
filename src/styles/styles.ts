@@ -1,4 +1,4 @@
-import { StyleSheet } from "react-native";
+import { Platform, StyleSheet } from "react-native";
 import THEME from "../theme/theme";
 
 
@@ -6,7 +6,9 @@ const styles = StyleSheet.create({
   safeArea:{
       flex: 1,
       backgroundColor: THEME.COLORS.BACKGROUND,
-      padding: 15,
+      paddingVertical: Platform.OS === 'ios' ? 20 : 10, // Define padding diferente para iOS e Android
+      paddingHorizontal:Platform.OS =="ios"? 30 : 15,
+     
      
   },
 
@@ -141,6 +143,8 @@ viewUser:{
     backgroundColor:THEME.COLORS.BACKGROUND,
     flexDirection:"row",
     justifyContent:"space-between",
+    
+
 },
 
 viewContainer:{
@@ -244,7 +248,7 @@ principalTransacoes:{
     marginLeft:2,
     backgroundColor:THEME.COLORS.SECUNDARIO,
     width:"auto",
-    height:450,
+    height:310,
     borderRadius:8,
     marginBottom:30,
     

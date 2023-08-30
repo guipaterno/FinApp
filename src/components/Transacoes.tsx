@@ -15,6 +15,7 @@ import * as Animatable from "react-native-animatable"
 
 
 
+
 const Transacoes = ()=>{
     const [transacoesModal, setTransacoesModal] = useState(false);
     const [filtroModal,setFiltroModal] = useState(false);
@@ -56,6 +57,7 @@ const Transacoes = ()=>{
         <Calendario/>
         <Movimentacao/>
         <AddBotao/>
+        
         
            
         </Animatable.View>

@@ -6,8 +6,13 @@ const styles = StyleSheet.create({
   safeArea:{
       flex: 1,
       backgroundColor: THEME.COLORS.BACKGROUND,
-      paddingVertical: Platform.OS === 'ios' ? 20 : 10, // Define padding diferente para iOS e Android
-      paddingHorizontal:Platform.OS =="ios"? 30 : 15,
+      paddingVertical: 10,
+      paddingHorizontal:15,
+      marginHorizontal:Platform.OS =="ios"? 15 : 10,
+      marginVertical:5,
+
+
+
      
      
   },
@@ -78,8 +83,8 @@ const styles = StyleSheet.create({
 
   },
   imagemHome:{
-    width:130,
-    height:100,
+    width:Platform.OS =="ios"? 100 : 130,
+    height:Platform.OS =="ios"? 80 :100,
     
     resizeMode:"center",
 
@@ -127,8 +132,8 @@ errorText:{
 
 buttonUser:{
   backgroundColor: "#e9fbf4",
-  width:45,
-  height:45,
+  width:Platform.OS =="ios"? 35 : 45,
+  height:Platform.OS =="ios"? 35 : 45,
   justifyContent:"center",
   alignItems:"center",
   borderRadius:50,
@@ -143,6 +148,9 @@ viewUser:{
     backgroundColor:THEME.COLORS.BACKGROUND,
     flexDirection:"row",
     justifyContent:"space-between",
+    width:"auto",
+    height:Platform.OS =="ios"? 65 : "auto",
+
     
 
 },
@@ -150,7 +158,7 @@ viewUser:{
 viewContainer:{
     backgroundColor: THEME.COLORS.PRIMARIA,
     width:"auto",
-    height:"auto",
+    height:Platform.OS =="ios"? 220 : "auto",
     borderRadius:15,
 },
 
@@ -158,7 +166,8 @@ viewContainerMov:{
   flex:1,
   backgroundColor: THEME.COLORS.PRIMARIA,
   width:"auto",
-  height:"auto",
+  height:Platform.OS =="ios"? 135 : "auto",
+
   borderRadius:15,
 },
 textContainerSaldo:{
@@ -196,7 +205,7 @@ iconeValor:{
 textContas:{
     color:"white",
     fontWeight:"bold",
-    marginTop:30,
+    marginTop: Platform.OS =="ios"? 15 : 30,
     marginLeft:10,
     marginBottom:12,
     fontSize:18,
@@ -207,7 +216,7 @@ textContas:{
 principalContainer:{
     backgroundColor:"white",
     width:280,
-    height:"auto",
+    height:Platform.OS =="ios"? 100 : "auto",
     borderRadius:15,
     paddingLeft:12,
     marginLeft:10,
@@ -219,27 +228,27 @@ principalContainer:{
 iconeCartao:{
     color:"black",
     fontSize:18,
-    paddingVertical:20,
+    paddingVertical:Platform.OS =="ios"? 5 :20,
     paddingLeft:5,  
       
 },
 
 textBanco:{
     color:"black",
-    fontSize:16,
+   fontSize:Platform.OS =="ios"? 14 :16,
 },
 
 viewBancoSaldo:{
-    paddingTop:45,
+    paddingTop:Platform.OS =="ios"? 20 :45,
 },
 textValorSaldo:{
     color:"black",
-    fontSize:16,
+    fontSize:Platform.OS =="ios"? 14 :16,
 
 },
 textSaldo:{
     color:"gray",
-    fontSize:13,
+    fontSize:Platform.OS =="ios"? 11 :13,
     
 },
 
@@ -248,14 +257,13 @@ principalTransacoes:{
     marginLeft:2,
     backgroundColor:THEME.COLORS.SECUNDARIO,
     width:"auto",
-    height:310,
+    height:Platform.OS =="ios"? 320 : 310,
     borderRadius:8,
-    marginBottom:30,
-    
+      
 },
 containerTransacoes:{
     flexDirection:"row",
-    marginTop:18,
+    marginTop:Platform.OS =="ios"? 10 :18,
     justifyContent:"center"
 
     
@@ -287,7 +295,8 @@ iconFilter:{
 principalCalendario:{
     marginTop:24,
     flexDirection:"row",
-    justifyContent:"space-around"
+    justifyContent:"space-around",
+    paddingBottom:Platform.OS =="ios"?5:2,
     
     
 },
@@ -331,7 +340,7 @@ buttonMes:{
     height:"auto",
     flexDirection:"column",
     justifyContent:"center",
-    paddingTop:10,
+    paddingBottom:2,
     margin:5
     
     

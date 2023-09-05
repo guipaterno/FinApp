@@ -9,6 +9,8 @@ import AddBotao from "./AddBotao";
 import ModalTransacao  from "../Modal/ModalTransacao";
 import ModalFiltro from "../Modal/ModalFiltro";
 import * as Animatable from "react-native-animatable"
+import ModalFlatList from "../Modal/ModalTransacao";
+import ModalFlatListFiltro from "../Modal/ModalFiltro";
 
 
 
@@ -34,8 +36,7 @@ const Transacoes = ()=>{
                     transparent={true}
                     onRequestClose={()=> setTransacoesModal(false)}
                     >
-                        <ModalTransacao
-                        handleClose={() => setTransacoesModal(false)}/>
+                        <ModalFlatList/>
                     </Modal>
                     <View style={styles.containerFilter}>
 
@@ -47,8 +48,7 @@ const Transacoes = ()=>{
                     transparent={true}
                     onRequestClose={()=> setFiltroModal(false)}
                     >
-                        <ModalFiltro
-                        handleCloseFiltro={() => setFiltroModal(false)}/>
+                        <ModalFlatListFiltro/>
                     </Modal>
 
                     </View>

@@ -1,60 +1,92 @@
 import React from 'react';
-import { SafeAreaView, View, TouchableOpacity,Text } from 'react-native';
+import { SafeAreaView, View, TouchableOpacity,Text, FlatList } from 'react-native';
 
 import styles from "../styles/styles";
 
 
-type Props={
-    handleCloseFiltro:()=>void;
-}
 
-const ModalFiltro = ({handleCloseFiltro}:Props) => {
+type ItemFiltro = {
+  id: string;
+  filtro: string;
+
+
+};
+
+const FiltroMov: ItemFiltro[] = [
+  {
+    id: '10',
+    filtro: 'Todas',
+    
+  },
+  {
+    
+    id: '20',
+    filtro: 'Alimentação',
+ 
+  },
+  {
+    id: '30',
+    filtro: 'Lazer',
+    
+  },
+  
+  {
+    id: '40',
+    filtro: 'Salário',
+    
+  },
+
+  {
+    id: '50',
+    filtro: 'Cursos',
+    
+  },
+  
+ 
+];
+
+type ItemProps2 = {
+  item: ItemFiltro;
+  
+};
+
+const ModalTransacaoFiltro = ({item}:ItemProps2) => {
   return (
+    <>
     <SafeAreaView style={styles.modalContainer}>
-        <TouchableOpacity style={{flex:1, zIndex:9}} onPress={handleCloseFiltro}></TouchableOpacity>
+      
+        <TouchableOpacity style={{flex:1, zIndex:9}} onPress={()=>{}}></TouchableOpacity>
         <View style={styles.viewModal}>
-        <Text style={styles.textTituloModal}>Filtro</Text>
-        
-             <TouchableOpacity
-             style={styles.actionBtn}
-             onPress={()=>{}}
-             activeOpacity={0.8}
-             >
-                <Text style={styles.actionText}>Todos</Text>
-            </TouchableOpacity>
             <TouchableOpacity
              style={styles.actionBtn}
              onPress={()=>{}}
              activeOpacity={0.8}
-              
-              >
-                <Text style={styles.actionText}>Salário</Text>
-            </TouchableOpacity>
-            <TouchableOpacity
-             style={styles.actionBtn}
-             onPress={()=>{}}
-             activeOpacity={0.8}
+             
              >
-                <Text style={styles.actionText}>Lazer</Text>
+                <Text style={styles.actionText}>{item.filtro}</Text>
             </TouchableOpacity>
-
-            <TouchableOpacity
-             style={styles.actionBtn}
-             onPress={()=>{}}
-             activeOpacity={0.8}
-             >
-                <Text style={styles.actionText}>Alimentação</Text>
-            </TouchableOpacity>
-            <TouchableOpacity
-             style={styles.actionBtn}
-             onPress={()=>{}}
-             activeOpacity={0.8}
-             >
-                <Text style={styles.actionText}>Viagem</Text>
-            </TouchableOpacity>
+            
         </View>
     </SafeAreaView>
+                </>
   );
 }
 
-export default ModalFiltro;
+
+const ModalFlatListFiltro = () => {
+
+  return (
+      
+    <FlatList style={styles.viewContainerModal} 
+      data={FiltroMov}
+      showsVerticalScrollIndicator={false}
+      renderItem={ModalTransacaoFiltro}
+      keyExtractor={item => item.id}
+      scrollEnabled        
+
+    />
+  
+  );
+};
+
+export default ModalFlatListFiltro;

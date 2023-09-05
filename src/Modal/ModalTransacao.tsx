@@ -1,5 +1,5 @@
 import React from 'react';
-import { SafeAreaView, View, TouchableOpacity,Text } from 'react-native';
+import { SafeAreaView, View, TouchableOpacity,Text, FlatList } from 'react-native';
 
 import styles from "../styles/styles";
 
@@ -7,39 +7,82 @@ import styles from "../styles/styles";
 type Props={
     handleClose:()=>void;
 }
+;
 
-const ModalTransacao = ({handleClose}:Props) => {
+type ItemFiltro = {
+  id: string;
+  filtro: string;
+
+
+};
+
+const Filtro: ItemFiltro[] = [
+  {
+    id: '1',
+    filtro: 'Todas',
+    
+  },
+  {
+    
+    id: '2',
+    filtro: 'Receita',
+ 
+  },
+  {
+    id: '3',
+    filtro: 'Despesas',
+    
+  },
+
+ 
+];
+
+type ItemProps = {
+  item: ItemFiltro;
+  
+};
+
+const ModalTransacao = ({item}:ItemProps) => {
   return (
+    <>
     <SafeAreaView style={styles.modalContainer}>
-        <TouchableOpacity style={{flex:1, zIndex:9}} onPress={handleClose}></TouchableOpacity>
+      
+        <TouchableOpacity style={{flex:1, zIndex:9}}></TouchableOpacity>
         <View style={styles.viewModal}>
-        <Text style={styles.textTituloModal}>Transações</Text>
             <TouchableOpacity
              style={styles.actionBtn}
              onPress={()=>{}}
              activeOpacity={0.8}
-              
-              >
-                <Text style={styles.actionText}>Todas</Text>
-            </TouchableOpacity>
-            <TouchableOpacity
-             style={styles.actionBtn}
-             onPress={()=>{}}
-             activeOpacity={0.8}
+             
              >
-                <Text style={styles.actionText}>Receitas</Text>
+                <Text style={styles.actionText}>{item.filtro}</Text>
             </TouchableOpacity>
-
-            <TouchableOpacity
-             style={styles.actionBtn}
-             onPress={()=>{}}
-             activeOpacity={0.8}
-             >
-                <Text style={styles.actionText}>Despesas</Text>
-            </TouchableOpacity>
+            
         </View>
     </SafeAreaView>
+                </>
   );
 }
 
-export default ModalTransacao;
+
+const ModalFlatList = () => {
+
+  return (
+      
+    <FlatList style={styles.viewContainerModal} 
+      data={Filtro}
+      showsVerticalScrollIndicator={false}
+      renderItem={ModalTransacao}
+      keyExtractor={item => item.id}
+      scrollEnabled        
+
+    />
+  
+  );
+};
+
+
+
+
+
+export default ModalFlatList;

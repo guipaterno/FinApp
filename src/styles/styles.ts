@@ -418,31 +418,42 @@ buttonMes:{
   },
 
   modalContainer:{
-    flex:1,
-    /* alignContent:"center",
+    alignContent:"center",
     backgroundColor:"white",
-    opacity:0.8, */
-    
+    opacity:0.8,
+    width:"auto",
+    height:120,
+    justifyContent:"flex-end",
+   
     
   },
 
   viewModal:{
-    marginVertical: 50,
+    marginVertical: 5,
     marginLeft:35,
     marginRight:35,
     alignContent:"center",
-    backgroundColor:"white",
+    backgroundColor:THEME.COLORS.PRIMARIA,
     elevation:5,
-    padding:50,
+    padding:20,
     width:"auto",
-    height:"auto",
+    height:100,
     borderRadius:10,
     shadowOpacity:0.50,
     shadowRadius:4,
    
-    
-     
   },
+
+  viewContainerModal:{
+    marginTop:Platform.OS =="ios"?280 : 350,
+    flex:1,
+    backgroundColor: "white",
+    width:"auto",
+    height:0,
+    borderRadius:15,
+    paddingTop:20,
+  },
+
   textTituloModal:{
     fontSize:18,
     fontWeight:"bold",
